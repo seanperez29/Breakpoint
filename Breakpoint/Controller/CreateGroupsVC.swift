@@ -26,8 +26,19 @@ class CreateGroupsVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     }
     
+}
 
+extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.UserCell, for: indexPath) as! UserCell
+        let profileImage = #imageLiteral(resourceName: "defaultProfileImage")
+        cell.configureCell(profileImage: profileImage, email: "jimmy@aol.com", isSelected: true)
+        return cell
+    }
 }

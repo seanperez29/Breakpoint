@@ -20,5 +20,6 @@ struct Constants {
     
     struct Cells {
         static let FeedCell = "FeedCell"
+        static let UserCell = "UserCell"
     }
 }
