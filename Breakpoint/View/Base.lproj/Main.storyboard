@@ -16,6 +16,7 @@
             <string>AvenirNext-Bold</string>
         </array>
         <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
             <string>Menlo-Regular</string>
         </array>
     </customFonts>
@@ -272,15 +273,56 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="100" id="Bcw-uk-KlZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="100" id="Bcw-uk-KlZ" customClass="GroupCell" customModule="Breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bcw-uk-KlZ" id="uSx-zR-cfk">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAE-Yx-XKb">
+                                                    <rect key="frame" x="16" y="16" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVR-Bh-sRc">
+                                                    <rect key="frame" x="24" y="69.5" width="335" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxS-DT-EH2">
+                                                    <rect key="frame" x="24" y="45" width="335" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vxS-DT-EH2" secondAttribute="trailing" constant="8" id="5rm-fd-w4E"/>
+                                                <constraint firstItem="CAE-Yx-XKb" firstAttribute="top" secondItem="uSx-zR-cfk" secondAttribute="topMargin" constant="8" id="G70-Hp-wiX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SVR-Bh-sRc" secondAttribute="trailing" constant="8" id="SQH-3i-iF9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CAE-Yx-XKb" secondAttribute="trailing" constant="8" id="TTN-EH-gZW"/>
+                                                <constraint firstItem="CAE-Yx-XKb" firstAttribute="leading" secondItem="uSx-zR-cfk" secondAttribute="leadingMargin" constant="8" id="U0c-dU-YUq"/>
+                                                <constraint firstItem="SVR-Bh-sRc" firstAttribute="leading" secondItem="uSx-zR-cfk" secondAttribute="leadingMargin" constant="16" id="XOB-OO-gAS"/>
+                                                <constraint firstItem="SVR-Bh-sRc" firstAttribute="top" secondItem="vxS-DT-EH2" secondAttribute="bottom" constant="8" id="cNC-GN-xnr"/>
+                                                <constraint firstItem="vxS-DT-EH2" firstAttribute="top" secondItem="CAE-Yx-XKb" secondAttribute="bottom" constant="8" id="iJG-N3-aok"/>
+                                                <constraint firstItem="vxS-DT-EH2" firstAttribute="leading" secondItem="uSx-zR-cfk" secondAttribute="leadingMargin" constant="16" id="z7P-ds-64L"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="groupDescription" destination="vxS-DT-EH2" id="uz2-gb-lq8"/>
+                                            <outlet property="groupTitle" destination="CAE-Yx-XKb" id="qCn-Cw-psX"/>
+                                            <outlet property="memberCount" destination="SVR-Bh-sRc" id="Jda-dt-ZUm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="gxd-ng-bap"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="DGj-Gl-ocq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -297,6 +339,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Groups" image="groups-tabIcon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="VDE-Xf-jEa" id="50y-dk-edA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
