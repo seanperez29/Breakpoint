@@ -572,9 +572,11 @@
                     <connections>
                         <outlet property="emailTextField" destination="R0G-ds-ahZ" id="zxC-Th-xgj"/>
                         <outlet property="passwordTextField" destination="Co2-cU-k0q" id="Dap-gV-reo"/>
+                        <segue destination="wfR-Ru-Awa" kind="unwind" identifier="unwindToFeed" unwindAction="prepareForUnwind:" id="UsO-Ww-L6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gi8-8d-YIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wfR-Ru-Awa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-767" y="0.0"/>
         </scene>

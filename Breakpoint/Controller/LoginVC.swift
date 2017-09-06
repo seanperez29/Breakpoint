@@ -23,7 +23,7 @@ class LoginVC: UIViewController {
         guard let email = emailTextField.text, email != "", let password = passwordTextField.text, password != "" else { return }
         AuthService.instance.loginUser(withEmail: email, andPassword: password) { (success, error) in
             if success {
-                self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "unwindToFeed", sender: nil)
             } else {
                 print(String(describing: error?.localizedDescription))
             }
@@ -31,7 +31,7 @@ class LoginVC: UIViewController {
                 if success {
                     AuthService.instance.loginUser(withEmail: email, andPassword: password, completionHandler: { (success, error) in
                         if success {
-                            self.dismiss(animated: true, completion: nil)
+                            self.performSegue(withIdentifier: "unwindToFeed", sender: nil)
                         } else {
                             print(String(describing: error?.localizedDescription))
                         }

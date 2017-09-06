@@ -40,4 +40,12 @@ class DataService {
             completionHander(messageArray)
         }
     }
+    
+    func getUsername(forUID uid: String, completionHandler: @escaping (_ username: String) -> Void) {
+        Constants.URLs.Users.observeSingleEvent(of: .value) { userSnapshot in
+            let user = userSnapshot.childSnapshot(forPath: uid)
+            let email = user.childSnapshot(forPath: "email").value as! String
+            completionHandler(email)
+        }
+    }
 }

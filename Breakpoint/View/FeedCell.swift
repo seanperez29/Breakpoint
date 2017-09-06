@@ -16,7 +16,9 @@ class FeedCell: UITableViewCell {
     
     func configureCell(profileImage: UIImage, message: Message) {
         self.profileImage.image = profileImage
-        self.emailLabel.text = message.senderId
+        DataService.instance.getUsername(forUID: message.senderId) { email in
+            self.emailLabel.text = email
+        }
         self.messageLabel.text = message.message
     }
 }

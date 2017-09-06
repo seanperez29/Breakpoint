@@ -11,6 +11,7 @@ import UIKit
 class FeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func prepareForUnwind(_ segue: UIStoryboardSegue) {}
     var messages = [Message]()
     
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class FeedVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DataService.instance.getAllFeedMessages { messages in
-            self.messages = messages
+            self.messages = messages.reversed()
             self.tableView.reloadData()
         }
     }
