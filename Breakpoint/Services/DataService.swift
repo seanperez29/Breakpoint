@@ -16,4 +16,14 @@ class DataService {
     func createUser(_ uid: String, _ userData: [String: Any]) {
         Constants.URLs.Users.child(uid).updateChildValues(userData)
     }
+    
+    func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, completionHandler: @escaping (_ success: Bool) -> Void) {
+        if groupKey != nil {
+            // send to groups ref
+        } else {
+            // send to feed
+            Constants.URLs.Feed.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            completionHandler(true)
+        }
+    }
 }
