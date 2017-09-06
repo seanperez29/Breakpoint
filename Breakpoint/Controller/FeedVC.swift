@@ -9,11 +9,34 @@
 import UIKit
 
 class FeedVC: UIViewController {
-    
 
+    @IBOutlet weak var tableView: UITableView!
+    var messages = [Message]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DataService.instance.getAllFeedMessages { messages in
+            self.messages = messages
+            self.tableView.reloadData()
+        }
+    }
 
+}
+
+extension FeedVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.FeedCell, for: indexPath) as! FeedCell
+        let image = #imageLiteral(resourceName: "defaultProfileImage")
+        let message = messages[indexPath.row]
+        cell.configureCell(profileImage: image, message: message)
+        return cell
+    }
 }
 

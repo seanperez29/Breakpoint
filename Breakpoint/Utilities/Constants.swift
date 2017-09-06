@@ -18,4 +18,7 @@ struct Constants {
         static let Feed = Constants.URLs.FirebaseDatabase.child("feed")
     }
     
+    struct Cells {
+        static let FeedCell = "FeedCell"
+    }
 }
