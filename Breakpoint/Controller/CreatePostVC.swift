@@ -19,7 +19,7 @@ class CreatePostVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sendButton.bindToKeyboard()
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
@@ -34,6 +34,10 @@ class CreatePostVC: UIViewController {
     
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    deinit {
+        sendButton.unbindToKeyboard()
     }
     
 }

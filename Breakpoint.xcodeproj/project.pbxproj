@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		911643AB1F5FC4F2008573EB /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911643AA1F5FC4F2008573EB /* MeVC.swift */; };
 		911643AD1F5FC8E6008573EB /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911643AC1F5FC8E6008573EB /* CreatePostVC.swift */; };
+		913E54B51F605251008717E8 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E54B41F605251008717E8 /* UIViewExt.swift */; };
 		91440ACB1F5F74340081A03D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440ACA1F5F74340081A03D /* AppDelegate.swift */; };
 		91440ACD1F5F74340081A03D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440ACC1F5F74340081A03D /* FeedVC.swift */; };
 		91440ACF1F5F74340081A03D /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440ACE1F5F74340081A03D /* GroupsVC.swift */; };
@@ -30,6 +31,7 @@
 		27A867A9F5E4FB3136E3CE51 /* Pods-Breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 		911643AA1F5FC4F2008573EB /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		911643AC1F5FC8E6008573EB /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		913E54B41F605251008717E8 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		91440AC71F5F74340081A03D /* Breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91440ACA1F5F74340081A03D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91440ACC1F5F74340081A03D /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		91440AE11F5F74710081A03D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				913E54B41F605251008717E8 /* UIViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E54B51F605251008717E8 /* UIViewExt.swift in Sources */,
 				91440AF01F5F885A0081A03D /* ShadowView.swift in Sources */,
 				91440AEA1F5F81380081A03D /* AuthVC.swift in Sources */,
 				91440AE81F5F77BB0081A03D /* Constants.swift in Sources */,
