@@ -26,6 +26,7 @@
 		91BC1DB71F605E0B00C02C20 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC1DB61F605E0B00C02C20 /* FeedCell.swift */; };
 		91BC1DB91F605FB700C02C20 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC1DB81F605FB700C02C20 /* Message.swift */; };
 		91C6CCCF1F5F9115001C1C61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91440AE31F5F76090081A03D /* GoogleService-Info.plist */; };
+		91D6722A1F6085D20031BBD1 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D672291F6085D20031BBD1 /* CreateGroupsVC.swift */; };
 		BB0853A73BBD8527E20ED681 /* Pods_Breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7ADFCF93D5CC8101C56451 /* Pods_Breakpoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		91440AF11F5F896E0081A03D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		91BC1DB61F605E0B00C02C20 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		91BC1DB81F605FB700C02C20 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		91D672291F6085D20031BBD1 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
 		AA17B92B6C7AC12F79A9F2E6 /* Pods-Breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		DB7ADFCF93D5CC8101C56451 /* Pods_Breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				91440AEB1F5F81730081A03D /* LoginVC.swift */,
 				911643AA1F5FC4F2008573EB /* MeVC.swift */,
 				911643AC1F5FC8E6008573EB /* CreatePostVC.swift */,
+				91D672291F6085D20031BBD1 /* CreateGroupsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				911643AB1F5FC4F2008573EB /* MeVC.swift in Sources */,
 				911643AD1F5FC8E6008573EB /* CreatePostVC.swift in Sources */,
 				91440AF21F5F896E0081A03D /* AuthService.swift in Sources */,
+				91D6722A1F6085D20031BBD1 /* CreateGroupsVC.swift in Sources */,
 				91BC1DB91F605FB700C02C20 /* Message.swift in Sources */,
 				91440ACD1F5F74340081A03D /* FeedVC.swift in Sources */,
 				91440AE51F5F77440081A03D /* DataService.swift in Sources */,
