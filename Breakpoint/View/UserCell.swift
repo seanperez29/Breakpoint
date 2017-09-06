@@ -26,7 +26,13 @@ class UserCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+        if selected {
+            if checkImage.isHidden == true {
+                checkImage.isHidden = false
+            } else {
+                checkImage.isHidden = true
+            }
+        }
     }
     
 }

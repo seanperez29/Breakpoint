@@ -17,6 +17,7 @@ class CreateGroupsVC: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var emailArray = [String]()
+    var selectedMembers = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +53,28 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.UserCell, for: indexPath) as! UserCell
         let profileImage = #imageLiteral(resourceName: "defaultProfileImage")
-        cell.configureCell(profileImage: profileImage, email: emailArray[indexPath.row], isSelected: false)
+        if selectedMembers.contains(emailArray[indexPath.row]) {
+            cell.configureCell(profileImage: profileImage, email: emailArray[indexPath.row], isSelected: true)
+        } else {
+             cell.configureCell(profileImage: profileImage, email: emailArray[indexPath.row], isSelected: false)
+        }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chosenEmail = emailArray[indexPath.row]
+        guard !selectedMembers.contains(chosenEmail) else {
+            selectedMembers = selectedMembers.filter{ $0 != chosenEmail }
+            if selectedMembers.isEmpty {
+                emailSearchLabel.text = "add people to your group"
+                doneButton.isHidden = true
+            } else {
+                emailSearchLabel.text = selectedMembers.joined(separator: ", ")
+            }
+            return
+        }
+        selectedMembers.append(chosenEmail)
+        doneButton.isHidden = false
+        emailSearchLabel.text = selectedMembers.joined(separator: ", ")
     }
 }
 
