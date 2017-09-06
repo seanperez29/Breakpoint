@@ -55,13 +55,49 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="100" id="oJT-Ep-nwy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="100" id="oJT-Ep-nwy" customClass="FeedCell" customModule="Breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oJT-Ep-nwy" id="ft9-L9-BLo">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="giG-Uz-M2N">
+                                                    <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@breakpoint.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rch-u2-uyw">
+                                                    <rect key="frame" x="70" y="10" width="295" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="This is my message..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-eQ-z4X">
+                                                    <rect key="frame" x="70" y="37.5" width="295" height="52.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mq9-eQ-z4X" secondAttribute="bottom" constant="10" id="47y-nt-WAm"/>
+                                                <constraint firstAttribute="trailing" secondItem="rch-u2-uyw" secondAttribute="trailing" constant="10" id="5pq-LT-fsf"/>
+                                                <constraint firstItem="giG-Uz-M2N" firstAttribute="leading" secondItem="ft9-L9-BLo" secondAttribute="leading" constant="10" id="Ao9-ab-Xjy"/>
+                                                <constraint firstItem="mq9-eQ-z4X" firstAttribute="leading" secondItem="giG-Uz-M2N" secondAttribute="trailing" constant="10" id="NfU-wX-MSN"/>
+                                                <constraint firstItem="giG-Uz-M2N" firstAttribute="height" secondItem="ft9-L9-BLo" secondAttribute="height" multiplier="0.5" id="bD6-EQ-Fdp"/>
+                                                <constraint firstItem="rch-u2-uyw" firstAttribute="top" secondItem="ft9-L9-BLo" secondAttribute="top" constant="10" id="boJ-Fx-JPX"/>
+                                                <constraint firstItem="giG-Uz-M2N" firstAttribute="width" secondItem="ft9-L9-BLo" secondAttribute="height" multiplier="0.5" id="cWs-PZ-lLh"/>
+                                                <constraint firstAttribute="trailing" secondItem="mq9-eQ-z4X" secondAttribute="trailing" constant="10" id="pcL-xA-sf6"/>
+                                                <constraint firstItem="giG-Uz-M2N" firstAttribute="top" secondItem="ft9-L9-BLo" secondAttribute="top" constant="10" id="q2h-Rg-NZR"/>
+                                                <constraint firstItem="mq9-eQ-z4X" firstAttribute="top" secondItem="rch-u2-uyw" secondAttribute="bottom" constant="10" id="v1C-Dd-OGe"/>
+                                                <constraint firstItem="rch-u2-uyw" firstAttribute="leading" secondItem="giG-Uz-M2N" secondAttribute="trailing" constant="10" id="xAn-c5-m3J"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="emailLabel" destination="rch-u2-uyw" id="kgx-kc-ryE"/>
+                                            <outlet property="messageLabel" destination="mq9-eQ-z4X" id="erm-V4-HGf"/>
+                                            <outlet property="profileImage" destination="giG-Uz-M2N" id="vBx-lF-weZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
