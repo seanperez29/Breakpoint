@@ -39,5 +39,8 @@ extension FeedVC: UITableViewDataSource, UITableViewDelegate {
         cell.configureCell(profileImage: image, message: message)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 

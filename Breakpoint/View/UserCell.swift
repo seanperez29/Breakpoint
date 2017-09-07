@@ -32,6 +32,7 @@ class UserCell: UITableViewCell {
             } else {
                 checkImage.isHidden = true
             }
+            self.setSelected(false, animated: true)
         }
     }
     

@@ -11,6 +11,8 @@
 		911643AD1F5FC8E6008573EB /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911643AC1F5FC8E6008573EB /* CreatePostVC.swift */; };
 		9124EAD01F60BD2A00995F50 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124EACF1F60BD2A00995F50 /* GroupCell.swift */; };
 		9124EAD21F60BF6100995F50 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124EAD11F60BF6100995F50 /* Group.swift */; };
+		9124EAD41F60C58E00995F50 /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124EAD31F60C58E00995F50 /* GroupFeedCell.swift */; };
+		9124EAD61F60C5FB00995F50 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124EAD51F60C5FB00995F50 /* GroupFeedVC.swift */; };
 		913E54B51F605251008717E8 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E54B41F605251008717E8 /* UIViewExt.swift */; };
 		91440ACB1F5F74340081A03D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440ACA1F5F74340081A03D /* AppDelegate.swift */; };
 		91440ACD1F5F74340081A03D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440ACC1F5F74340081A03D /* FeedVC.swift */; };
@@ -39,6 +41,8 @@
 		911643AC1F5FC8E6008573EB /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		9124EACF1F60BD2A00995F50 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		9124EAD11F60BF6100995F50 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		9124EAD31F60C58E00995F50 /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		9124EAD51F60C5FB00995F50 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 		913E54B41F605251008717E8 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		91440AC71F5F74340081A03D /* Breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91440ACA1F5F74340081A03D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				911643AA1F5FC4F2008573EB /* MeVC.swift */,
 				911643AC1F5FC8E6008573EB /* CreatePostVC.swift */,
 				91D672291F6085D20031BBD1 /* CreateGroupsVC.swift */,
+				9124EAD51F60C5FB00995F50 /* GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				91BC1DB61F605E0B00C02C20 /* FeedCell.swift */,
 				91D6722B1F6099240031BBD1 /* UserCell.swift */,
 				9124EACF1F60BD2A00995F50 /* GroupCell.swift */,
+				9124EAD31F60C58E00995F50 /* GroupFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				913E54B51F605251008717E8 /* UIViewExt.swift in Sources */,
+				9124EAD61F60C5FB00995F50 /* GroupFeedVC.swift in Sources */,
 				91440AF01F5F885A0081A03D /* ShadowView.swift in Sources */,
 				91440AEA1F5F81380081A03D /* AuthVC.swift in Sources */,
 				91440AE81F5F77BB0081A03D /* Constants.swift in Sources */,
@@ -329,6 +336,7 @@
 				911643AB1F5FC4F2008573EB /* MeVC.swift in Sources */,
 				911643AD1F5FC8E6008573EB /* CreatePostVC.swift in Sources */,
 				91440AF21F5F896E0081A03D /* AuthService.swift in Sources */,
+				9124EAD41F60C58E00995F50 /* GroupFeedCell.swift in Sources */,
 				91D6722A1F6085D20031BBD1 /* CreateGroupsVC.swift in Sources */,
 				91BC1DB91F605FB700C02C20 /* Message.swift in Sources */,
 				91440ACD1F5F74340081A03D /* FeedVC.swift in Sources */,

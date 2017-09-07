@@ -39,5 +39,8 @@ extension GroupsVC: UITableViewDataSource, UITableViewDelegate {
         cell.configureCell(group)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
