@@ -27,6 +27,7 @@
 		91440AEE1F5F82660081A03D /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440AED1F5F82660081A03D /* InsetTextField.swift */; };
 		91440AF01F5F885A0081A03D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440AEF1F5F885A0081A03D /* ShadowView.swift */; };
 		91440AF21F5F896E0081A03D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91440AF11F5F896E0081A03D /* AuthService.swift */; };
+		9167B2DA1F662D1D00B8FF7B /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9167B2D91F662D1D00B8FF7B /* UIViewControllerExt.swift */; };
 		91BC1DB71F605E0B00C02C20 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC1DB61F605E0B00C02C20 /* FeedCell.swift */; };
 		91BC1DB91F605FB700C02C20 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC1DB81F605FB700C02C20 /* Message.swift */; };
 		91C6CCCF1F5F9115001C1C61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91440AE31F5F76090081A03D /* GoogleService-Info.plist */; };
@@ -60,6 +61,7 @@
 		91440AED1F5F82660081A03D /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		91440AEF1F5F885A0081A03D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		91440AF11F5F896E0081A03D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		9167B2D91F662D1D00B8FF7B /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		91BC1DB61F605E0B00C02C20 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		91BC1DB81F605FB700C02C20 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		91D672291F6085D20031BBD1 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				913E54B41F605251008717E8 /* UIViewExt.swift */,
+				9167B2D91F662D1D00B8FF7B /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				91440ACF1F5F74340081A03D /* GroupsVC.swift in Sources */,
 				91BC1DB71F605E0B00C02C20 /* FeedCell.swift in Sources */,
 				9124EAD01F60BD2A00995F50 /* GroupCell.swift in Sources */,
+				9167B2DA1F662D1D00B8FF7B /* UIViewControllerExt.swift in Sources */,
 				91440ACB1F5F74340081A03D /* AppDelegate.swift in Sources */,
 				911643AB1F5FC4F2008573EB /* MeVC.swift in Sources */,
 				911643AD1F5FC8E6008573EB /* CreatePostVC.swift in Sources */,
