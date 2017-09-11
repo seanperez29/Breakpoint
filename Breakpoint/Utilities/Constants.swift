@@ -22,5 +22,6 @@ struct Constants {
         static let FeedCell = "FeedCell"
         static let UserCell = "UserCell"
         static let GroupCell = "GroupCell"
+        static let GroupFeedCell = "GroupFeedCell"
     }
 }

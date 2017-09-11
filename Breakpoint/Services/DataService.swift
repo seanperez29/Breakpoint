@@ -19,9 +19,9 @@ class DataService {
     
     func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, completionHandler: @escaping (_ success: Bool) -> Void) {
         if groupKey != nil {
-            // send to groups ref
+            Constants.URLs.Groups.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            completionHandler(true)
         } else {
-            // send to feed
             Constants.URLs.Feed.childByAutoId().updateChildValues(["content": message, "senderId": uid])
             completionHandler(true)
         }
@@ -38,6 +38,20 @@ class DataService {
                 messageArray.append(newMessage)
             }
             completionHander(messageArray)
+        }
+    }
+    
+    func getAllMessagesFor(desiredGroup group: Group, completionHandler: @escaping (_ messagesArray: [Message]) -> Void) {
+        var groupMessageArray = [Message]()
+        Constants.URLs.Groups.child(group.key).child("messages").observeSingleEvent(of: .value) { groupMessageSnapshot in
+            guard let groupMessageSnapshot = groupMessageSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for groupMessage in groupMessageSnapshot {
+                let message = groupMessage.childSnapshot(forPath: "content").value as! String
+                let senderId = groupMessage.childSnapshot(forPath: "senderId").value as! String
+                let newMessage = Message(message: message, senderId: senderId)
+                groupMessageArray.append(newMessage)
+            }
+            completionHandler(groupMessageArray)
         }
     }
     

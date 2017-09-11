@@ -431,6 +431,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qCw-lx-BdZ" id="YyO-Yu-Y73"/>
+                                    <outlet property="delegate" destination="qCw-lx-BdZ" id="sGz-Xn-IVD"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@breakpoint.com, people@morepeople.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="DxM-Cc-06X">
                                 <rect key="frame" x="16" y="78" width="343" height="16.5"/>
@@ -672,7 +676,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAF-kX-pC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1493.5999999999999" y="721.88905547226398"/>
+            <point key="canvasLocation" x="1494" y="785"/>
         </scene>
         <!--Me-->
         <scene sceneID="thB-07-xkf">
@@ -724,7 +728,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="zJZ-sT-JgH" firstAttribute="centerX" secondItem="Jan-6V-yMk" secondAttribute="centerX" id="42H-Ji-034"/>
                                     <constraint firstItem="K4D-mB-SRv" firstAttribute="top" secondItem="Jan-6V-yMk" secondAttribute="top" constant="30" id="4cz-sl-p2y"/>
                                     <constraint firstAttribute="trailing" secondItem="zJZ-sT-JgH" secondAttribute="trailing" constant="20" id="Ldy-Ac-eWo"/>
                                     <constraint firstItem="zJZ-sT-JgH" firstAttribute="top" secondItem="K4D-mB-SRv" secondAttribute="bottom" constant="20" id="OjN-hb-P4N"/>
@@ -738,7 +741,7 @@
                                 <rect key="frame" x="0.0" y="345" width="375" height="273"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="rKr-sr-XFI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserFeedCell" rowHeight="50" id="rKr-sr-XFI">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rKr-sr-XFI" id="8PI-8E-PEZ">
